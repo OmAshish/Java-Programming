@@ -1,0 +1,19 @@
+package com.hsbc.DataAccessObject;
+
+import java.util.List;
+
+import com.hsbc.collections.Book;
+
+public interface BookDAO {
+	
+	public List<Book> getAllBooks();
+	
+	public Book getBook(Book b);
+	
+	public void insertBook(int b);
+	
+	public void deleteBook(Book b);
+	
+	public void update(int b);
+
+}

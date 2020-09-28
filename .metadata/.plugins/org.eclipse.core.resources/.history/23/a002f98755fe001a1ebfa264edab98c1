@@ -1,0 +1,22 @@
+package com.EveryDayGoodProducts.BusinessLogicLayer;
+
+public abstract class AllProducts {
+
+	String Name;
+	
+	public AllProducts()
+	{
+		
+	}
+	
+	public AllProducts(String Name)
+	{
+		this.Name = Name;
+	}
+	
+	public abstract double cost();
+	public final String getName()
+	{
+		return Name;
+	}
+}

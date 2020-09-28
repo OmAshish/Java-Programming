@@ -1,0 +1,30 @@
+package com.hsbc.collections;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Set<String> set1 = new HashSet<String>();
+		set1.add("Java");
+		set1.add("Python");
+		
+		Set<String> set2 = new HashSet<String>();
+		set2.add("MongoDB");
+		set2.add("SQL");
+		
+		Set<String> set3 = new HashSet<String>();
+		set2.add("C++");
+		set2.add("C");
+		
+		ArrayList<Book> al = new ArrayList<Book>();
+		al.add(new Book(12,set1,98.0));
+		al.add(new Book(13,set2,234.0));
+		al.add(new Book(10,set3,567.0));
+	}
+
+}

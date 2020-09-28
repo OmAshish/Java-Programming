@@ -1,0 +1,17 @@
+package com.EveryDayGoodProducts.DataAccessLayer;
+
+/**
+ * 
+ * @author OM ASHISH MISHRA
+ *
+ */
+
+/* Print the elements of Apparel class */
+public class PrintApparelItems {
+	
+	public static void printRecords()
+	{
+		System.out.println();
+	}
+
+}

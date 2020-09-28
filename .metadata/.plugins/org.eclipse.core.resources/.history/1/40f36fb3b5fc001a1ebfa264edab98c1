@@ -1,0 +1,5 @@
+package com.hsbc.demoserialization;
+
+public class Employee {
+
+}

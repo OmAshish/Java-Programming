@@ -1,0 +1,13 @@
+package com.hsbc.dataprocessing;
+
+public class EmployeeDAO extends Employee{
+	
+	int id;
+	
+	
+	public EmployeeDAO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+
+}

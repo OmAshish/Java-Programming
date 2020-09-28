@@ -1,0 +1,84 @@
+package com.hsbc;
+
+import java.io.*;
+
+public class Demo {
+	
+	public static void main(String[] args) {
+		
+		Demo d = new Demo();
+		
+		d.writeFile("Hi this is new text");
+		
+	}
+	
+	public void readFile() {
+		
+		try
+		{
+			int c  = 0;
+			FileInputStream fin = new FileInputStream("abc.txt");
+			int i = 0;
+			
+			while((i = fin.read()) != -1)
+			{
+				System.out.print((char) i);
+				c++;
+			}
+			fin.close();
+			System.out.println(i);
+		}
+		catch(FileNotFoundException e)
+		{
+			e.printStackTrace();
+		}
+		catch(IOException e)
+		{
+			System.err.println(e);
+		}
+//		finally
+//		{
+//			try
+//			{
+//				fin.close();
+//			}
+//			catch(IOException e)
+//			{
+//				System.err.println(e);
+//			}
+//		}
+	}
+	
+	public void writeFile(String s1) {
+		
+		FileOutputStream fos = null;
+		
+		try
+		{
+			fos = new FileOutputStream("abc.txt", true);
+//		String s = "Hello world this is a sample file";
+//		String s = s1;
+		fos.write(s1.getBytes());
+//		fos.close();
+		}
+		catch(FileNotFoundException e)
+		{
+			e.printStackTrace();
+		}
+		catch(IOException e)
+		{
+			System.err.println(e);
+		}
+		finally
+		{
+			try
+			{
+				fos.close();
+			}
+			catch(IOException e)
+			{
+				System.err.println(e);
+			}
+		}
+	}
+}

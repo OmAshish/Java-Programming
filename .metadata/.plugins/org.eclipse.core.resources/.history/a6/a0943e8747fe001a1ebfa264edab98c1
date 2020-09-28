@@ -1,0 +1,17 @@
+package com.hsbc.model;
+
+import java.util.List;
+
+public interface EmployeeDAO1 {
+	
+	public List<Employee> getAllEmployees();
+	
+	public void insertEmp(Employee e);
+	
+	public void deleteEmployee(int empid);
+	
+	public void updateEmployeeSalary(int empid, double salary);
+	
+	public Employee getEmployee(int empid);
+
+}

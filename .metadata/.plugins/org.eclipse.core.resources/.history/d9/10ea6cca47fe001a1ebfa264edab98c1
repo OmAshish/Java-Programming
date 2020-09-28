@@ -1,0 +1,28 @@
+package hsbc.com.connectivity;
+
+import java.sql.Connection;
+import java.sql.Statement;
+
+public class DBConnection {
+	
+	Connection con;
+	Statetment stat;
+	
+	public DBConnection() {
+		// TODO Auto-generated constructor stub
+		try
+		{
+			Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
+		}
+		catch(ClassNotFoundException e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	public Statement getStatement()
+	{
+		
+	}
+
+}

@@ -1,0 +1,66 @@
+package com.hsbc.demothreading;
+
+//import java.io.IOException;
+
+public class Demo extends Thread {
+	
+//	public static void main(String[] args) {
+//		MyClass m1 = new MyClass();
+//		MyClass m2 = new MyClass();
+//		MyClass m3 = new MyClass();
+//		
+//		m1.start();
+//		m2.start();
+//		m3.start();
+//	}
+	
+//	public static void main(String[] args) {
+//		
+//		Table t = new Table();
+//		
+//		Threading t1 = new Threading(t);
+//		MyClass t2 = new MyClass(t);
+//		t2.run();
+//		t1.run();
+////		Threading f = new Threading();
+////		MyClass c = new MyClass();
+////		
+////		f.setName("ONE");
+////		c.setName("TWO");
+////		
+////		f.start();
+////		c.start();
+//	}
+	
+	public synchronized static void main(String[] args) {
+		HelloThreading h = new HelloThreading(); // Runnable Object
+		Thread t1 = new Thread(h);
+		Thread t2 = new Thread(h);
+		
+		Runnable r = new Runnable()
+		{
+			@Override
+			public void run()
+			{
+				for(int i = 11;i<=20;i++)
+				{
+					System.out.println(i);
+				}
+				try
+				{
+					Thread.sleep(500);
+				}
+				catch(InterruptedException e)
+				{
+					e.printStackTrace();
+				}
+			}
+		};
+		Thread t3 = new Thread(r);
+		
+		t1.start();
+		t2.start();
+		t3.start();
+	}
+
+}

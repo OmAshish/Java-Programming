@@ -1,0 +1,36 @@
+package com.EveryDayGoodProducts.ViewLayer;
+
+import java.util.ArrayList;
+
+import com.EveryDayGoodProducts.BusinessLogicLayer.AllProducts;
+import com.EveryDayGoodProducts.BusinessLogicLayer.Apparel;
+import com.EveryDayGoodProducts.BusinessLogicLayer.Electronics;
+import com.EveryDayGoodProducts.BusinessLogicLayer.FoodItems;
+
+public class Main {
+	
+	public Main() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static void main(String[] args) {
+		
+
+		Apparel apparel1 = new Apparel(1,"CottonShirt",123,3,"Cotton",2);
+		FoodItems food1 = new FoodItems(1,"ChocolateChips",125,12,"12-09-2018","12-09-2019","Veg",2);
+		Electronics electron1 = new Electronics(1,"TV Remote",240,6, 1);
+		
+		
+		AllProducts items[] = {apparel1,food1,electron1};
+		
+		Checkout c = new Checkout();
+		c.addItems(items);
+		
+		System.out.println(c);
+		c.clearCart();
+		System.out.println(c);
+		
+	}
+	
+
+}

@@ -1,0 +1,12 @@
+package com.EveryDayGoodProducts.DataAccessLayer;
+
+/**
+ * 
+ * @author OM ASHISH MISHRA
+ *
+ */
+
+/* Print the elements of Apparel class */
+public class PrintFoodItems {
+
+}

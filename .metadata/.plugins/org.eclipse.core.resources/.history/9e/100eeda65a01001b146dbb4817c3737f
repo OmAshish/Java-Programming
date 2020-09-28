@@ -1,0 +1,26 @@
+package com.hsbc.dao.copy;
+
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class LoginDB {
+	
+	DBConnection db = new DBConnection();
+	
+	public void insertUser(String username, String password)
+	{
+		try
+		{
+			PreparedStatement pst = db.getPreparedStatement("insert into users values(?,?)");
+			
+			pst.setString(1, username);
+			pst.setString(2, password1);
+			pst.execute();
+		}
+		catch(SQLException e)
+		{
+			e.printStackTrace();
+		}
+	}
+
+}

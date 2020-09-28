@@ -1,0 +1,29 @@
+package com.hsbc.collectionActors;
+
+import java.util.Collections;
+
+public class SortUtil {
+	
+	public static void sortByBName()
+	{
+		CompareBooksByName na = new CompareBooksByName();
+		
+		Collections.sort(al,na);
+		System.out.println(al);
+	}
+	
+	public static void sortByPrice()
+	{
+		CompareBooksByPrice pr = new CompareBooksByPrice();
+		
+		Collections.sort(al,pr);
+		System.out.println(al);
+	}
+	
+	
+	
+	
+	
+	
+
+}

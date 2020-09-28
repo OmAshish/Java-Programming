@@ -1,0 +1,12 @@
+package com.hsbc.collectionActors;
+
+public class PrintUtil {
+	
+	
+	
+	public static void printRecords(List l)
+	{
+		System.out.println(l);
+	}
+
+}

@@ -1,0 +1,19 @@
+package com.EveryDayGoodProducts.DataAccessLayer;
+
+import java.util.List;
+
+/**
+ * 
+ * @author OM ASHISH MISHRA
+ *
+ */
+
+/* Print the elements of Apparel class */
+public class PrintFoodItems {
+	
+	public static void printRecords()
+	{
+		System.out.println();
+	}
+
+}

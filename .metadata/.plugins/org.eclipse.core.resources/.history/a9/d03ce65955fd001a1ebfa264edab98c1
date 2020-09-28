@@ -1,0 +1,31 @@
+package com.hsbc.demothreading;
+
+public class MyClass extends Thread, Table  {
+	
+	Table t;
+	
+	public MyClass(Table t)
+	{
+		this.t = t;
+	}
+	
+	@Override
+	public void run() {
+		Thread t = Thread.currentThread();
+//		Table.print(9);
+//		for(int i = 1;i<=26;i++)
+//		{
+////			System.out.println(t.getName()+" "+i);
+//			try
+//			{
+//				Thread.sleep(1000);
+//			}
+//			catch(InterruptedException e)
+//			{
+//				e.printStackTrace();
+//			}
+//			
+//		}
+	}
+
+}

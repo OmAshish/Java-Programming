@@ -1,0 +1,65 @@
+package com.EveryDayGoodProducts.BusinessLogicLayer;
+
+/**
+ * 
+ * @author OM ASHISH MISHRA
+ *
+ */
+
+/* AllProducts - Meant to keep a record of all the products of the company */
+public abstract class AllProducts {
+
+	private String Name;
+	
+	public AllProducts()
+	{
+		
+	}
+	
+	public AllProducts(String Name)
+	{
+		this.Name = Name;
+	}
+	
+	public abstract double cost();
+	public final String getName()
+	{
+		return Name;
+	}
+
+	@Override
+	public String toString() {
+		return "AllProducts [Name=" + Name + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((Name == null) ? 0 : Name.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		AllProducts other = (AllProducts) obj;
+		if (Name == null) {
+			if (other.Name != null)
+				return false;
+		} else if (!Name.equals(other.Name))
+			return false;
+		return true;
+	}
+
+	public void setName(String name) {
+		Name = name;
+	}
+	
+	
+}

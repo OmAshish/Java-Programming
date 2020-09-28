@@ -1,0 +1,61 @@
+package com.hsbc.DataAccessObject;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.hsbc.collections.Book;
+
+public class BookDAOImpl implements BookDAO{
+	
+	List<Book> bookList;
+	
+	
+	public BookDAOImpl(List<Book> bookList) {
+		super();
+		this.bookList = new ArrayList<Book>();
+	}
+
+	@Override
+	public List<Book> getAllBooks()
+	{
+		return this.bookList;
+	}
+	
+	@Override
+	public Book getBook(Book b)
+	{
+		Book book = bookList.get(bookList.indexOf(b));
+		return null;
+	}
+	
+	@Override
+	public void insertBook(Book b)
+	{
+		bookList.add(b);
+	}
+	
+	@Override
+	public void deleteBook(Book b)
+	{
+		bookList.remove(b);
+	}
+	
+	@Override
+	public void updateBook(Book oldBook, Book updateBook)
+	{
+		bookList.add(bookList.indexOf(oldBook), updateBook);
+	}
+
+	@Override
+	public void update(Book b, Book b1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Book getBook(int bookid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

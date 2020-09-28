@@ -1,0 +1,25 @@
+package com.hsbc.demothreading;
+
+import java.io.IOException;
+
+public class Demo extends Thread {
+	
+//	public static void main(String[] args) {
+//		MyClass m1 = new MyClass();
+//		MyClass m2 = new MyClass();
+//		MyClass m3 = new MyClass();
+//		
+//		m1.start();
+//		m2.start();
+//		m3.start();
+//	}
+	
+	public static void main(String[] args) {
+		Threading f = new Threading();
+		MyClass c = new MyClass();
+		
+		f.start();
+		c.start();
+	}
+
+}

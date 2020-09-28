@@ -1,0 +1,5 @@
+package com.hsbc.connection;
+
+public class DBConnection {
+
+}

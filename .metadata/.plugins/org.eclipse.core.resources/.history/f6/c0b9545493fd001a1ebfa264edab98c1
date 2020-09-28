@@ -1,0 +1,12 @@
+package com.hsbc.collectionActors;
+
+public class PrintUtil extends StoreUtil{
+	
+	
+	
+	public static void printRecords()
+	{
+		su.getRecords();
+	}
+
+}

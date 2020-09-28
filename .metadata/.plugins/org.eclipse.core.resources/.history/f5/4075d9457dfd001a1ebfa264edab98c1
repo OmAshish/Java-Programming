@@ -1,0 +1,26 @@
+package com.hsbc.dataprocessing;
+
+import java.util.ArrayList;
+
+public class Employee comparable<Employee> {
+	
+	int id;
+	String name;
+	double salary;
+	
+	public Employee()
+	{
+		
+	}
+	
+	public Employee(int id, String name, double salary)
+	{
+		super();
+		this.id = id;
+		this.name =  name;
+		this.salary = salary;
+	}
+	
+	
+
+}

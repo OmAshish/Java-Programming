@@ -1,0 +1,103 @@
+package com.EveryDayGoodProducts.ViewLayer;
+
+
+import com.EveryDayGoodProducts.BusinessLogicLayer.AllProducts;
+/**
+ * 
+ * @author OM ASHISH MISHRA
+ *
+ */
+
+/* Checkout - Meant to find the details added to the cart, deleted and updated */
+public class Checkout {
+	
+	AllProducts[] cashRegister;
+
+	public Checkout()
+	{
+		
+	}
+	
+	public void addItems(AllProducts[] items)
+	{
+		cashRegister = items;
+	}
+	
+	public void clearCart()
+	{
+		cashRegister = null;
+	}
+	
+	public int numberofItems()
+	{
+		try
+		{
+		if(cashRegister!=null)
+		{
+			return cashRegister.length;
+		}
+		else
+		{
+			System.out.println("Empty");
+			return 0;
+		}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			System.out.println("The Block Ends Here!");
+			return 0;
+		}
+	}
+	
+	public double getTotalCost()
+	{
+		try{
+		if(cashRegister!=null)
+		{
+			double total = 0;
+			for(AllProducts i: cashRegister)
+			{
+				total = total+i.cost();
+			}
+			return total;
+		}
+		else
+		{
+			System.out.println("Cart is empty....");
+			return 0;
+		}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			System.out.println("The Block Ends Here!");
+			return 0;
+		}
+	}
+	
+	@Override
+	public String toString() {
+		if(cashRegister != null)
+		{
+			String receipt = "";
+			for(AllProducts i: cashRegister)
+			{
+				receipt = receipt + i.getName()+" => "+i.cost()+"\n";
+			}
+			return receipt+" TOTAL: "+this.getTotalCost();
+		}
+		else
+			{
+				System.out.println("Cart is Empty");
+				return "BLANK";
+			}
+	}
+
+}

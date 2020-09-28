@@ -1,0 +1,17 @@
+package com.hsbc.collectionActors;
+
+import java.util.Collections;
+
+import com.hsbc.dataprocessing.IdCompare;
+import com.hsbc.dataprocessing.NameComparator;
+
+public class SortUtil {
+	
+	
+	CompareBooksByName na = new CompareBooksByName();
+	CompareBooksByPrice pr = new CompareBooksByPrice();
+	
+	Collections.sort(al,pr);
+	System.out.println(al);
+
+}

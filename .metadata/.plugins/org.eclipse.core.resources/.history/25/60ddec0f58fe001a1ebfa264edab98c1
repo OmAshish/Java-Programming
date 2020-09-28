@@ -1,0 +1,131 @@
+package com.EveryDayGoodProducts.BusinessLogicLayer;
+
+public class Apparel extends AllProducts {
+	
+	private int apparelId;
+	private String apparelName;
+	private double apparelPrice;
+	private int apparealSize;
+	private boolean apparelMaterial;
+	private int apparelQuantity;
+	
+	public Apparel() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Apparel(int apparelId, String apparelName, double apparelPrice, int apparealSize, boolean apparelMaterial,
+			int apparelQuantity) {
+		super(Name);
+		this.apparelId = apparelId;
+		this.apparelName = apparelName;
+		this.apparelPrice = apparelPrice;
+		this.apparealSize = apparealSize;
+		this.apparelMaterial = apparelMaterial;
+		this.apparelQuantity = apparelQuantity;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + apparealSize;
+		result = prime * result + apparelId;
+		result = prime * result + (apparelMaterial ? 1231 : 1237);
+		result = prime * result + ((apparelName == null) ? 0 : apparelName.hashCode());
+		long temp;
+		temp = Double.doubleToLongBits(apparelPrice);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + apparelQuantity;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Apparel other = (Apparel) obj;
+		if (apparealSize != other.apparealSize)
+			return false;
+		if (apparelId != other.apparelId)
+			return false;
+		if (apparelMaterial != other.apparelMaterial)
+			return false;
+		if (apparelName == null) {
+			if (other.apparelName != null)
+				return false;
+		} else if (!apparelName.equals(other.apparelName))
+			return false;
+		if (Double.doubleToLongBits(apparelPrice) != Double.doubleToLongBits(other.apparelPrice))
+			return false;
+		if (apparelQuantity != other.apparelQuantity)
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Apparel [apparelId=" + apparelId + ", apparelName=" + apparelName + ", apparelPrice=" + apparelPrice
+				+ ", apparealSize=" + apparealSize + ", apparelMaterial=" + apparelMaterial + ", apparelQuantity="
+				+ apparelQuantity + "]";
+	}
+
+	public int getApparelId() {
+		return apparelId;
+	}
+
+	public void setApparelId(int apparelId) {
+		this.apparelId = apparelId;
+	}
+
+	public String getApparelName() {
+		return apparelName;
+	}
+
+	public void setApparelName(String apparelName) {
+		this.apparelName = apparelName;
+	}
+
+	public double getApparelPrice() {
+		return apparelPrice;
+	}
+
+	public void setApparelPrice(double apparelPrice) {
+		this.apparelPrice = apparelPrice;
+	}
+
+	public int getApparealSize() {
+		return apparealSize;
+	}
+
+	public void setApparealSize(int apparealSize) {
+		this.apparealSize = apparealSize;
+	}
+
+	public boolean isApparelMaterial() {
+		return apparelMaterial;
+	}
+
+	public void setApparelMaterial(boolean apparelMaterial) {
+		this.apparelMaterial = apparelMaterial;
+	}
+
+	public int getApparelQuantity() {
+		return apparelQuantity;
+	}
+
+	public void setApparelQuantity(int apparelQuantity) {
+		this.apparelQuantity = apparelQuantity;
+	}
+
+	@Override
+	public double cost() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+
+}

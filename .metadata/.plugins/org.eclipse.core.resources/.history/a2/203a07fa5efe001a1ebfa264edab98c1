@@ -1,0 +1,14 @@
+package com.EveryDayGoodProducts.DataAccessLayer;
+
+/**
+ * 
+ * @author OM ASHISH MISHRA
+ *
+ */
+
+/* AllProducts - Meant to keep a record of all the products of the company */
+public class PrintApparelItems {
+	
+	
+
+}

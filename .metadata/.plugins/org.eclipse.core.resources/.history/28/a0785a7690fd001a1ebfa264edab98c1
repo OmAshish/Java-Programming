@@ -1,0 +1,16 @@
+package com.hsbc.collections;
+
+import java.util.ArrayList;
+
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		ArrayList<Book> al = new ArrayList<Book>();
+		al.add(new Book(12,"abc",98.0));
+		al.add(new Book(13,"aaa",234.0));
+		al.add(new Book(10,"rty",567.0));
+	}
+
+}

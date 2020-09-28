@@ -1,0 +1,14 @@
+package com.hsbc.demothreading;
+
+public class Table {
+	
+	public static void print(int t)
+	{
+		int i = 1;
+		for(;i<=10;i++)
+		{
+			System.out.println(t+" x "+i+" = "+(t*i));
+		}
+	}
+
+}

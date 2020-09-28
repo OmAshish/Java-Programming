@@ -1,0 +1,49 @@
+package com.hsbc.demoserialization;
+
+public class Demo {
+	
+//	public static void main(String[] args) {
+//		Employee e = new Employee(11,"ABC",99000);
+//		
+//		e.doSerialize();
+//		
+//		Employee e1 = new Employee();
+//		System.out.println(e1);
+//		
+//		e1 = e.doDeserialize();
+//		System.out.println(e1);
+//		
+//	}
+	
+	
+	public synchronized static void main(String[] args) {
+		HelloThreading h = new HelloThreading(); // Runnable Object
+		Thread t1 = new Thread(h);
+		Thread t2 = new Thread(h);
+		
+		Runnable r = new Runnable()
+		{
+			@Override
+			public void run()
+			{
+				for(int i = 11;i<=20;i++)
+				{
+					System.out.println(i);
+				}
+				try
+				{
+					Thread.sleep(500);
+				}
+				catch(InterruptedException e)
+				{
+					e.printStackTrace();
+				}
+			}
+		};
+		Thread t3 = new Thread(r);
+		
+		t1.start();
+		t2.start();
+		t3.start();
+	}
+}

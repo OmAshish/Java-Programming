@@ -1,0 +1,39 @@
+package com.hsbc.dataprocessing;
+
+import java.util.ArrayList;
+
+public class StackArray {
+	
+	public ArrayList al;
+	
+	public StackArray() {
+		al = new ArrayList();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static void main(String[] args) {
+		
+		StackArray s = new StackArray();
+		s.push(12);
+		s.push(12);
+		s.push(90);
+		s.push(34);
+		s.push(45);
+		s.push(56);
+		
+		s.pop();
+	}
+	
+	public void push(int n)
+	{
+		System.out.println("The Element added : "+n);
+		al.add(n);
+	}
+	
+	public void pop()
+	{
+		int g = al.remove(al.get(al.size()));
+		System.out.println ("The Element deleted : "+al.size());
+	}
+
+}

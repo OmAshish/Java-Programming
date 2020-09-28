@@ -1,0 +1,28 @@
+package com.hsbc.collectionActors;
+
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class StoreUtil<T> {
+	
+	ArrayList al = new ArrayList();
+	
+	public void addRecords(T book){
+		al.add(book);
+	}
+	public void getRecords()
+	{
+		Iterator i = al.iterator();
+		while(i.hasNext())
+		{
+			System.out.println(i.next());
+		}
+	}
+	
+	public void getNumOfRecords()
+	{
+		System.out.println(al.size());
+	}
+
+}

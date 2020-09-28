@@ -1,0 +1,88 @@
+package com.EveryDayGoodProducts.BusinessLogicLayer;
+
+/**
+ * 
+ * @author OM ASHISH MISHRA
+ *
+ */
+
+/* AllProducts - Meant to keep a record of all the products of the company */
+public abstract class AllProducts {
+
+	private String Name;
+	
+	/* Default Constructor */
+	public AllProducts()
+	{
+		
+	}
+	
+	/* Parameterized Constructor to get the Names */
+	public AllProducts(String Name)
+	{
+		this.Name = Name;
+	}
+	
+	/**
+	 * Cost of the total buying of goods!
+	 * @return
+	 */
+	public abstract double cost();
+	
+	/**
+	 * Getter and Setter Functions for the details taken under Parameterized Constructor
+	 * @return
+	 */
+	public final String getName()
+	{
+		return Name;
+	}
+	
+	/**
+	 * Get the Details of the Customer in a Array like manner
+	 * 
+	 */
+	@Override
+	public String toString() {
+		return "AllProducts [Name=" + Name + "]";
+	}
+	
+	/**
+	 * Get Hashcode for handling NullPointException and Address Related Issues 
+	 * 
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((Name == null) ? 0 : Name.hashCode());
+		return result;
+	}
+	
+	/**
+	 * Get Equals Function for the understanding of the data comparison
+	 * @return
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		AllProducts other = (AllProducts) obj;
+		if (Name == null) {
+			if (other.Name != null)
+				return false;
+		} else if (!Name.equals(other.Name))
+			return false;
+		return true;
+	}
+
+	public void setName(String name) {
+		Name = name;
+	}
+	
+	
+}

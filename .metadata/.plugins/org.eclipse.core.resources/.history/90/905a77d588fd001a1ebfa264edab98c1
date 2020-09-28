@@ -1,0 +1,34 @@
+package com.hsbc.dataprocessing;
+
+import java.util.ArrayList;
+
+public class Stacking {
+	
+	public ArrayList al;
+	
+	public Stacking() {
+		al = new ArrayList();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void push(int n)
+	{
+		System.out.println("The Element added : "+n);
+		al.add(n);
+	}
+	
+	public void pop()
+	{
+//		int g = al.remove(al.size()-1);
+		System.out.println ("The Element deleted : "+al.remove(al.size()-1));
+	}
+	
+	public static void main(String[] args) {
+		
+		Stacking s = new Stacking();
+		s.push(12);
+		s.pop();
+		
+	}
+
+}
